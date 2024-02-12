@@ -132,11 +132,17 @@
           We’ll
           never
           send you spam or pass on your email address</p>
-        <form class="w-full flex flex-col justify-start items-start gap-4">
-          <input class="w-full h-8 border border-white rounded-md text-sm" type="email" name="email" id="email"
-            required>
+        <form novalidate class="w-full flex flex-col justify-start items-start sm:flex-row sm: sm:gap-6 gap-4">
+          <div class="w-full sm:flex sm:flex-col ">
+            <input
+              class="outline-none w-full h-8 border border-white rounded-md text-sm text-slate-950 p-5 peer invalid:[&:not(:placeholder-shown)]:border-red-600"
+              type="email" name="email" id="email" placeholder=" " required>
+            <span class="text-red-600 pt-2 text-xs invisible peer-[:not(:placeholder-shown):invalid]:visible">Check your
+              email please</span>
+          </div>
+
           <button
-            class="self-end bg-pink-500 border-pink-500 rounded-md text-white py-3 px-12 text-sm font-medium shadow-md transition duration-300 hover:bg-pink-300"
+            class="self-end sm:self-start bg-pink-500 border-pink-500 rounded-md text-white py-3 px-12 text-sm font-medium shadow-md transition duration-300 hover:bg-pink-300"
             type="submit">Subscribe</button>
         </form>
 
